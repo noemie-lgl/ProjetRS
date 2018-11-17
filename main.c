@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <getopt.h>
-#include "listing.h"
+
 
 
 int main(int argc, char *argv[])
@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     if (argc<2){
         printf("missing argument");
         return 0;
-        //cas où on n'a pas d'argument
+        //cas oÃ¹ on n'a pas d'argument
     }
 
     int i;
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
        }
        switch(i){
        case 'l':
-            listing();
+            printf("option l");
             break;
 
        case 'i':
