@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <getopt.h>
 
-
+void listing(char *arg);
 
 int main(int argc, char *argv[])
 {
@@ -13,14 +13,16 @@ int main(int argc, char *argv[])
     }
 
     int i;
-    static struct option long_options[]={{"name",1,NULL,0},{"exec",1,NULL,0}}; //0: no argument , 1: an argument is required , 2: the argument is optional
+    static struct option long_options[]={
+    {"name",1,NULL,'n'},
+    {"exec",1,NULL,'e'}}; //0: no argument , 1: an argument is required , 2: the argument is optional
+
     int option_index;
 
     while(i=getopt_long(argc, argv, "lit:",long_options, &option_index )){
 
        if (i==-1){
-        printf("ERROR");
-        return 0;
+        break;
        }
        switch(i){
        case 'l':
@@ -36,6 +38,14 @@ int main(int argc, char *argv[])
 
            printf("option t with argument %s",optarg);
            break;
+
+        case 'n':
+            printf("option name with argument %s",optarg);
+            break;
+
+        case 'e':
+            printf("option exec");
+            break;
 
         }
     }
