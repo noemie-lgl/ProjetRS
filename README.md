@@ -16,3 +16,7 @@ commit du 18/11:
 listing n'affiche plus "." et ".."
 Quand le dossier est vide, il affiche le nom du dossier (comme find)
 Quand le dossier n'existe pas, renvoie "rsfind: DOSSIER: No such file or directory" : à la place de rsfind, faut-il que ce soit find pour renvoyer exactement la même chose que find? S'affiche en anglais sur mon ordinateur mais ne correspond pas sur ubuntu sur les ordis de l'école: find: 'ProjetRS': Aucun fichier ou dossier de ce type
+
+commit du 23/11:
+
+J'ai tout mis dans un même fichier rsfind.c. Je l'ai aussi commité sur gitlab et j'ai fait les modifications directement dessus puisqu'avec gitlab on peut directement voir si la compilation s'est bien déroulé; d'ailleurs je pense qu'on va finalement commiter que sur gitlab. 
